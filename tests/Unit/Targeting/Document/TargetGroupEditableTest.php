@@ -25,7 +25,7 @@ class TargetGroupEditableTest extends ModelTestCase
 {
     protected int $seed = 1;
 
-    protected Page $testPage;
+    protected ?Page $testPage;
 
     protected TestDataHelper $testDataHelper;
 

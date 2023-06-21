@@ -25,7 +25,7 @@ class TargetGroupEditableTest extends ModelTestCase
 {
     protected int $seed = 1;
 
-    protected ?Page $testPage;
+    protected Page $testPage;
 
     protected TestDataHelper $testDataHelper;
 
@@ -42,6 +42,8 @@ class TargetGroupEditableTest extends ModelTestCase
         $this->createTestPage();
         $this->testDataHelper->fillInput($this->testPage, $defaultEditableName, $defaultEditableData);
         $this->testPage->save();
+
+        $this->reloadPage();
 
         $targetGroup1 = 'testGroup1';
         $targetGroup2 = 'testGroup2';

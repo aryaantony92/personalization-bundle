@@ -43,6 +43,8 @@ class TargetGroupEditableTest extends ModelTestCase
         $this->testDataHelper->fillInput($this->testPage, $defaultEditableName, $defaultEditableData);
         $this->testPage->save();
 
+        $this->reloadPage();
+
         $targetGroup1 = 'testGroup1';
         $targetGroup2 = 'testGroup2';
 
